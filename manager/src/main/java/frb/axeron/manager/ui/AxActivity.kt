@@ -6,9 +6,11 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.EnterTransition
@@ -18,10 +20,11 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
+
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.padding
-import frb.axeron.manager.ui.theme.AppShape
+
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Card
@@ -33,6 +36,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
+
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
@@ -40,19 +44,24 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
+
 import androidx.lifecycle.viewmodel.compose.viewModel
+
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+
 import com.ramcosta.composedestinations.DestinationsNavHost
 import com.ramcosta.composedestinations.animations.NavHostAnimatedDestinationStyle
 import com.ramcosta.composedestinations.generated.NavGraphs
@@ -65,11 +74,13 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.ramcosta.composedestinations.navigation.dependency
 import com.ramcosta.composedestinations.utils.isRouteOnBackStackAsState
 import com.ramcosta.composedestinations.utils.rememberDestinationsNavigator
+
 import frb.axeron.api.AxeronInfo
 import frb.axeron.manager.R
 import frb.axeron.manager.ui.navigation.BottomBarDestination
 import frb.axeron.manager.ui.screen.FlashIt
 import frb.axeron.manager.ui.theme.AxManagerTheme
+import frb.axeron.manager.ui.theme.AppShape
 import frb.axeron.manager.ui.util.LocalSnackbarHost
 import frb.axeron.manager.ui.util.LocaleHelper
 import frb.axeron.manager.ui.viewmodel.ActivateViewModel
@@ -78,6 +89,7 @@ import frb.axeron.manager.ui.viewmodel.PluginViewModel
 import frb.axeron.manager.ui.viewmodel.PrivilegeViewModel
 import frb.axeron.manager.ui.viewmodel.SettingsViewModel
 import frb.axeron.manager.ui.viewmodel.ViewModelGlobal
+
 import frb.axeron.server.PluginInstaller
 
 class AxActivity : ComponentActivity() {
